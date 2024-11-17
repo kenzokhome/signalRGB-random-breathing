@@ -1,0 +1,54 @@
+<head>
+  	<title>Random Breathing Effect</title>
+	<meta description="Random color breathing effect that changes color at brightness 0." />
+    <meta publisher="KzKGames" />
+    <meta property="speed" label="Breathing Speed" type="number" min="1" max="10" default="5">
+</head>
+    
+<body style="margin: 0; padding: 0;">
+  	<canvas id="exCanvas" width="320" height="200"></canvas>
+</body>
+    
+<script>
+    // Get the canvas element from the DOM
+	var c = document.getElementById("exCanvas");
+    var ctx = c.getContext("2d");
+    var width = 320;
+    var height = 200;
+	
+    // Initialize variables
+    var hue = Math.random() * 360; // Start with a random hue
+    var brightness = 0; // Brightness level (0 to 1)
+    var increasing = true; // Direction of brightness change
+
+	// Randomize hue when brightness reaches 0
+    function randomizeHue() {
+        hue = Math.random() * 360; // New random color
+    }
+
+    function update() 
+    {
+		// Update brightness
+        if (increasing) {
+            brightness += speed * 0.002;
+            if (brightness >= 1) {
+                increasing = false; // Reverse direction
+            }
+        } else {
+            brightness -= speed * 0.002;
+            if (brightness <= 0) {
+                increasing = true; // Reverse direction
+                randomizeHue(); // Change color
+            }
+        }
+
+        // Draw rectangle with current hue and brightness
+        ctx.fillStyle = `hsl(${hue}, 100%, ${50 * brightness}%)`;
+        ctx.fillRect(0, 0, width, height);
+
+        // Request next frame
+        window.requestAnimationFrame(update);
+    }
+    // Start animation
+	window.requestAnimationFrame(update);
+</script>
