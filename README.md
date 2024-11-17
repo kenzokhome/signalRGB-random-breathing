@@ -12,7 +12,7 @@ A custom lighting effect for **SignalRGB** that creates a visually appealing **b
 
 1. Download the `random_breathing_effect.html` file from this repository.
 2. Place the file in the following directory:
-Users/<your-username>/Documents/WhirlwindFX/Effects
+`Users/<your-username>/Documents/WhirlwindFX/Effects`
 Replace `<your-username>` with your actual username.
 
 3. **Restart SignalRGB** to apply the new effect.
