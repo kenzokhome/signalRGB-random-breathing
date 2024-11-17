@@ -3,6 +3,8 @@
 	<meta description="Random color breathing effect that changes color at brightness 0." />
     <meta publisher="KzKGames" />
     <meta property="speed" label="Breathing Speed" type="number" min="1" max="10" default="5">
+	<meta property="holdDuration" label="Hold Duration on max brightness" type="number" min="0" max="100" default="0">
+
 </head>
     
 <body style="margin: 0; padding: 0;">
@@ -20,6 +22,7 @@
     var hue = Math.random() * 360; // Start with a random hue
     var brightness = 0; // Brightness level (0 to 1)
     var increasing = true; // Direction of brightness change
+    var holdTime = 0; // Time to hold brightness at 1
 
 	// Randomize hue when brightness reaches 0
     function randomizeHue() {
@@ -30,16 +33,22 @@
     {
 		// Update brightness
         if (increasing) {
-            brightness += speed * 0.002;
+            brightness += speed * 0.001;
             if (brightness >= 1) {
                 increasing = false; // Reverse direction
+				brightness = 1;
+				holdTime = holdDuration; // Start holding the brightness at 1
             }
         } else {
-            brightness -= speed * 0.002;
-            if (brightness <= 0) {
-                increasing = true; // Reverse direction
-                randomizeHue(); // Change color
-            }
+			if (holdTime > 0) {
+					holdTime--; // Decrease hold time
+			} else {
+				brightness -= speed * 0.001;
+				if (brightness <= 0) {
+					increasing = true; // Reverse direction
+					randomizeHue(); // Change color
+				}
+			}
         }
 
         // Draw rectangle with current hue and brightness
