@@ -1,14 +1,18 @@
-🎨 Random Breathing Effect for SignalRGB
-A custom SignalRGB effect that creates a breathing animation with smooth brightness transitions and random color changes. The color updates only when the brightness reaches zero, creating a visually appealing and dynamic lighting effect.
+# Random Breathing Effect for SignalRGB
 
-✨ Features
-Breathing Animation: Smoothly fades brightness in and out.
-Random Color Transitions: Changes to a random hue when brightness is at its lowest.
-Customizable Speed: Adjust the breathing speed dynamically using SignalRGB's Cycle Speed slider.
-🚀 Installation
-Download the .html file of this effect.
+A custom lighting effect for **SignalRGB** that creates a visually appealing **breathing animation** with smooth brightness transitions. The color of the effect changes randomly when the brightness reaches 0, adding a dynamic and engaging look to your RGB devices.
 
-Place the file in the following directory on your computer:
+## Features
+
+- **Breathing Animation**: Smooth brightness fade in and out.
+- **Random Color Transitions**: Color changes to a random hue when brightness reaches 0.
+- **Adjustable Speed**: Control the speed of the breathing effect with the SignalRGB slider.
+
+## Installation
+
+1. Download the `random_breathing_effect.html` file from this repository.
+2. Place the file in the following directory:
+
 
 javascript
 Copy code
