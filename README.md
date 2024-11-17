@@ -12,27 +12,38 @@ A custom lighting effect for **SignalRGB** that creates a visually appealing **b
 
 1. Download the `random_breathing_effect.html` file from this repository.
 2. Place the file in the following directory:
-
-
-javascript
-Copy code
 Users/<your-username>/Documents/WhirlwindFX/Effects
-Replace <your-username> with your actual username.
+Replace `<your-username>` with your actual username.
 
-Restart SignalRGB to load the effect.
+3. **Restart SignalRGB** to apply the new effect.
 
-🎛️ Usage
-Open SignalRGB.
-Navigate to the Effects section.
-Select the Random Breathing Effect from the list of installed effects.
-Adjust the Cycle Speed slider to control the animation's pace.
-🖥️ Compatibility
-Requires SignalRGB installed and running on your system.
-Designed to work with any RGB device supported by SignalRGB.
-🛠️ How It Works
-The effect uses the HTML <canvas> element and JavaScript to render the breathing animation in real-time. It dynamically adjusts brightness and hue, ensuring a smooth and visually striking experience. The speed of the effect can be customized through SignalRGB's built-in property sliders.
+## Usage
 
-💡 Want to Customize?
-Feel free to edit the .html file to tweak the animation or add new features. If you make improvements, consider contributing back by submitting a pull request!
+1. Open **SignalRGB**.
+2. Navigate to the **Effects** tab.
+3. Find and select **Random Breathing Effect** from the list of installed effects.
+4. Adjust the **Cycle Speed** slider to control the speed of the breathing animation.
+
+## How It Works
+
+The effect utilizes the HTML `<canvas>` element to render the animation in real-time. Brightness is smoothly adjusted between 0 and 1 to create the breathing effect, and the color (hue) changes randomly whenever brightness reaches 0. The speed of the effect is controlled by a **SignalRGB** slider, allowing for customization.
+
+## Customization
+
+You can edit the effect's code to suit your preferences:
+
+- **Adjust speed**: Modify the `speed` variable in the code for faster or slower transitions.
+- **Change behavior**: Customize the brightness or color transition logic.
+
+To get started with customization, clone or download the repository and modify the `random_breathing_effect.html` file.
+
+## Compatibility
+
+- Requires **SignalRGB** to be installed and running on your system.
+- Supports any RGB device compatible with SignalRGB.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 Let me know if you'd like further edits!
