@@ -7,6 +7,8 @@ A custom lighting effect for **SignalRGB** that creates a visually appealing **b
 - **Breathing Animation**: Smooth brightness fade in and out.
 - **Random Color Transitions**: Color changes to a random hue when brightness reaches 0.
 - **Adjustable Speed**: Control the speed of the breathing effect with the SignalRGB slider.
+- **Hold Duration**: When the brightness reaches 1, it stays there for a brief moment (controlled by `holdDuration`).
+
 
 ## Installation
 
@@ -22,7 +24,9 @@ Replace `<your-username>` with your actual username.
 1. Open **SignalRGB**.
 2. Navigate to the **Effects** tab.
 3. Find and select **Random Breathing Effect** from the list of installed effects.
-4. Adjust the **Cycle Speed** slider to control the speed of the breathing animation.
+4. Adjust:
+- **Breathing Speed**: Controls how quickly the brightness changes. A higher value increases the speed.
+- **Hold Duration**: The time (in frames) the brightness stays at 1 before continuing the cycle. A higher value increases the wait on full brightness
 
 ## How It Works
 
